@@ -1,0 +1,74 @@
+1. total products--10 
+2. single pr-10
+3. amnt-1 lak
+
+1. verify user aBLE TO ADD PRODUCT WITH QUNTITY <=10 total amount less than 1lak
+   a) verify user not allowed to add more than 10 items with same products with less than 1 lak amount
+2. verify user is not allowed to add products to cart once total amount+new product amout>1lak
+3. verify user able to add mutile products to add to cart
+5. verify user able to more than 10 products to cart with different items
+---------------------------------
+
+Users -- bane dob,age
+
+  select dob ,username from users where name='Shivaraj';
+
+  int[] arr1={1,2,3,2};
+int[] arr2={2,1,3,1};
+
+
+  boolean isSame=true;
+  if(arr1.length==arr2.length){
+ Map<Integer,Integer> m1=new HashMap();
+           Map<Integer,Integer> m2=new HashMap();
+        for(int i=0;i<arr1.length;i++){
+            
+          int k1=arr1[i];
+         int k2=arr2[i];
+          if(m1.containsKey(k1)){
+             m1.put(k1,m1.get(k1)+1);
+          }else{
+             m1.put(k1,1);
+           }
+          
+      if(m2.containsKey(k2)){
+             m2.put(k2,m2.get(k2)+1);
+          }else{
+             m2.put(k2,1);
+           }
+
+        
+       }
+
+        if(m1.size()!=m2.size(){
+          isSame=false;
+       }else{
+
+       Set<Integer> keys=m1.keySet();
+          for(Integer k:keys){
+              
+             if(m1.get(k)!m2.get(k)){
+
+               isSame=false;
+              break;
+        }
+
+
+           }
+        }
+
+   }else{
+       isSame=false;
+      }
+     
+           if(isSame){
+           System.out.println("both are same");
+          }else{
+            System.out.println("both are not same");
+         }
+
+
+
+
+
+
